@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<p>JavaScript Loops</p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p>Use for in</p>
+<p id="demo3"></p>
+
+<script>
+var number=["one","two","three"];
+var text1 = "";
+var text2 = "";
+var text3 = "";
+for (var i =0;i<number.length;i++){
+   text1+=number[i]+" ";
+   text2+="The number is "+i+"<br>";
+}
+
+var person={fname:"Daniyar",lname:"Myrzakanov", age:31};
+for (var x in person)
+    text3+=person[x]+"<br>";
+document.getElementById("demo1").innerHTML=text1;
+document.getElementById("demo2").innerHTML=text2;
+document.getElementById("demo3").innerHTML=text3;
+
+</script>
+</body>
+</html>
