@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <title>W3Schools Demo</title>
+  </head>
 <body>
 
 <form id="form" action="/action_page.php">
   First name: <input type="text" name="fname" value="Donald"><br>
   Last name: <input type="text" name="lname" value="Duck"><br><br>
-  <input type="submit" value="Submit">
+  <input type="submit" value="Отправить">
 </form>
 
 <p>Click "Try it" to display the value of each element in the form.</p>
@@ -13,7 +16,19 @@
 <button onclick="clickFunction()">Try it</button>
 
 <p id="demo"></p>
+<p id="demo1">Use the DOM to change my text!</p>
+<p>Use the DOM to change my text!</p>
+<p class="test">Use the DOM to change my text!</p>
+<p>Use the DOM to change my text!</p>
+<p id="demo5"></p>
 <script>
+
+document.getElementById("demo1").innerHTML = 'Good Job!';
+document.getElementsByTagName("p")[3].innerHTML = 'Good Job! p[3]';
+document.getElementsByClassName("test")[0].innerHTML='Good Job! p[4]';
+document.querySelectorAll("p")[5].innerHTML = 'Good Job! p[5]';
+document.getElementById("demo5").innerHTML = "The title of this document is: "
++document.title;
 function clickFunction(){
   var x = document.forms["form"];
   var text="";
@@ -22,7 +37,6 @@ function clickFunction(){
     text+=x.elements[i].value+"<br>"
   }
   document.getElementById("demo").innerHTML = text;
-  
 }
 </script>
 
