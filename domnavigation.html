@@ -1,0 +1,44 @@
+<html>
+
+  <head>
+      <title id="title">DOM Tutorial</title>
+  </head>
+
+  <body>
+      <h1 id="title">DOM Lesson one</h1>
+      <p id="title">Hello world!</p>
+
+<p id="demo1"></p><br>
+Accessing the innerHTML property is the same as accessing the nodeValue of the first child:
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<button onclick="click1()">document.body</button>
+<button onclick="click2()">document.documentElement</button>
+
+<script>
+var title = document.getElementById("title").innerHTML;
+var title2 = document.getElementById("title").firstChild.nodeValue;
+var title3 = document.getElementById("title").childNodes[0].nodeValue;
+var title4 = document.getElementById("title").nodeName;
+var title5 = document.getElementById("title").nodeType;
+document.getElementById("demo1").innerHTML ="&lt;title&gt; tag text is "+title;
+document.getElementById("demo2").innerHTML =
+"&lt;title&gt; tag text is firstChild.nodeValue "+title2+
+"<br>&lt;title&gt; tag text is childNodes[0].nodeValue "+title3;
+document.getElementById("demo3").innerHTML = title4;
+document.getElementById("demo4").innerHTML = "NodeType "+title5;
+
+function click1(){
+  alert(document.body.innerHTML);
+}
+function click2(){
+  alert(document.documentElement.innerHTML);
+}
+
+
+</script>
+  </body>
+
+
+</html>
