@@ -1,0 +1,20 @@
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+</div>
+
+<script>
+var p = document.createElement('p');
+var textNode = document.createTextNode('This is new.');
+p.appendChild(textNode);
+// document.getElementById("div1").appendChild(p);
+var child =  document.getElementById("p1");
+// document.getElementById("div1").insertBefore(p,child);
+// document.getElementById("div1").insertBefore(p,child.nextSibling);
+// document.getElementById("div1").removeChild(
+//   document.getElementById("p2")
+// );
+
+document.getElementById("div1").replaceChild(p,child);
+
+</script>
