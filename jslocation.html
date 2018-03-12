@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript</h2>
+
+<h3>The window.location object</h3>
+<input type="button" value="Load new document" onclick="newDoc()">
+<p id="demo"></p>
+
+<script>
+var location_href ="The full URL of this page is:<br>" + window.location.href+"<br>";
+var hostname = "Page hostname is " + window.location.hostname+"<br>";
+var pathname = "Page path is " + window.location.pathname+"<br>";
+var protocol = "Page protocol is " + window.location.protocol+"<br>";
+var port = "Port number is " + window.location.port+"<br>";
+
+document.getElementById("demo").innerHTML =
+location_href+hostname+pathname+protocol+port;
+
+function newDoc(){
+  window.location.assign("https://google.kz");
+}
+</script>
+
+</body>
+</html>
