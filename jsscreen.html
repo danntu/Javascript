@@ -9,9 +9,11 @@ var width = "Screen width is " + screen.width+"<br>";
 var height = "Screen height is " + screen.height+"<br>";
 var availWidth = "Available Screen Width " +screen.availWidth+"<br>";
 var availHeight = "Available Screen Height: " +screen.availHeight+"<br>";
+var colorDepth = "Screen Color Depth: " +screen.colorDepth+"<br>";
+var pixelDepth = "Screen Pixel Depth: " +screen.pixelDepth+"<br>";
 
 document.getElementById("demo").innerHTML =
-width+height+availWidth+availHeight;
+width+height+availWidth+availHeight+colorDepth+pixelDepth;
 width;
 
 </script>
