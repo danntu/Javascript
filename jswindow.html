@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<button onclick="closeFun()">Close</button>
+<script>
+
+
+// document.getElementById("demo").innerHTML = document.documentElement.clientWidth;
+// document.getElementById("demo").innerHTML = document.body.clientWidth;
+// document.getElementById("demo").innerHTML = window.innerWidth;
+var w = document.documentElement.clientWidth || document.body.clientWidth
+|| window.innerWidth;
+var h = document.documentElement.clientHeight || document.body.clientHeight
+|| window.innerHeight;
+var x = document.getElementById("demo");
+x.innerHTML ="Browser inner window width: " + w+", height "+h+".";
+
+function closeFun(){
+  window.close();
+}
+</script>
+
+</body>
+</html>
