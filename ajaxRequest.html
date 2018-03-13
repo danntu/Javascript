@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>The XMLHttpRequest Object</h2>
+<div id="demo">
+</div>
+<button type="button" onclick="loadTxt()">Request Data</button>
+
+<script>
+function loadTxt(){
+  var xhttp
+  if(window.XMLHttpRequest){
+    xhttp = new XMLHttpRequest();
+  } else {
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xhttp.onreadystatechange = function(){
+    if (this.readyState ==4 && this.status==200) {
+      document.getElementById("demo").innerHTML = this.responseText;
+    }
+  };
+  //xhttp.open("GET","https://www.w3schools.com/js/demo_get.asp",true);
+  // xhttp.open("GET","https://www.w3schools.com/js/demo_get.asp?t="+Math.random(),true);
+  // xhttp.open("GET","https://www.w3schools.com/js/demo_get2.asp?fname=Daniyar&lname=Myrzakanov",true);
+  // xhttp.open("POST","https://www.w3schools.com/js/demo_post.asp",true);
+  xhttp.open("POST","https://www.w3schools.com/js/demo_post2.asp",true);
+  xhttp.setRequestHeader("Content-type",
+"application/x-www-form-urlencoded");
+
+
+  xhttp.send("fname=Daniyar&lname=Myrzakanov");
+}
+</script>
