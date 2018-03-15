@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>How to loop through all properties in a JSON object.</p>
+<p id="demo"></p>
+
+<p>How to access nested JSON objects.</p>
+<p id="demo2"></p>
+
+
+<script>
+var myObj = { "name":"Danik", "age":32, "car":null, "color": null };
+for (x in myObj) {
+    document.getElementById("demo").innerHTML += x;
+    document.getElementById("demo").innerHTML +=" : "+myObj[x]+"<br>";
+}
+var myObj2 = { "name":"Danik", "age":32, "car":null,
+"color": {
+  "color1":null,"color2":"red","color3":"blue"
+  }
+};
+myObj2.color.color1="white";
+myObj2.color["color3"]="yellow";
+delete myObj2.color.color2;
+document.getElementById("demo2").innerHTML+= myObj2.color.color1+" ";
+document.getElementById("demo2").innerHTML+= myObj2.color.color2+" ";
+document.getElementById("demo2").innerHTML+= myObj2.color["color3"];
+</script>
+
+</body>
+</html>
