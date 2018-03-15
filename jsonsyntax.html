@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Access a JavaScript object:</p>
+<p id="demo"></p>
+<p>Access a JavaScript object using the bracket notation:</p>
+<p id="demo2"></p>
+<p>Modify a JavaScript object:</p>
+<p id="demo3"></p>
+<p>Modify a JavaScript object using the bracket notation:</p>
+<p id="demo4"></p>
+
+<script>
+var myObj, x;
+myObj = {"name":"Danik","age":32, "hobby":"computer"};
+document.getElementById("demo").innerHTML = "<b>"+myObj.name+"</b>";
+document.getElementById("demo2").innerHTML ="<b>"+myObj["hobby"]+"</b>";
+myObj.hobby="book";
+document.getElementById("demo3").innerHTML ="<b>"+myObj["hobby"]+"</b>";
+myObj["name"]="Dancho";
+document.getElementById("demo4").innerHTML ="<b>"+myObj.name+"</b>";
+
+</script>
