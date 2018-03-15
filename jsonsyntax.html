@@ -13,12 +13,12 @@
 
 <script>
 var myObj, x;
-myObj = {"name":"Danik","age":32, "hobby":"computer"};
-document.getElementById("demo").innerHTML = "<b>"+myObj.name+"</b>";
+myObj = {"name":["Danik","Daniyar"],"age":32, "hobby":"computer"};
+document.getElementById("demo").innerHTML = "<b>"+myObj.name[1]+"</b>";
 document.getElementById("demo2").innerHTML ="<b>"+myObj["hobby"]+"</b>";
 myObj.hobby="book";
 document.getElementById("demo3").innerHTML ="<b>"+myObj["hobby"]+"</b>";
 myObj["name"]="Dancho";
-document.getElementById("demo4").innerHTML ="<b>"+myObj.name+"</b>";
+document.getElementById("demo4").innerHTML ="<b>"+myObj["name"]+"</b>";
 
 </script>
