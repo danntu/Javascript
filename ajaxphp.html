@@ -16,14 +16,34 @@ function showHint(str) {
         xmlhttp.send();
     }
 }
+function showHintASP(str) {
+    if (str.length == 0) {
+        document.getElementById("txtHintASP").innerHTML = "";
+        return;
+    } else {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHintASP").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET", "https://www.w3schools.com/js/gethint.asp?q=" + str, true);
+        xmlhttp.send();
+    }
+}
 </script>
 </head>
 <body>
 
-<p><b>Start typing a name in the input field below:</b></p>
+<p><b>Start typing a name in the input field below PHP:</b></p>
 <form>
 First name: <input type="text" onkeyup="showHint(this.value)">
 </form>
 <p>Suggestions: <span id="txtHint"></span></p>
+<p><b>Start typing a name in the input field below ASP:</b></p>
+<form>
+First name: <input type="text" onkeyup="showHintASP(this.value)">
+</form>
+<p>Suggestions: <span id="txtHintASP"></span></p>
 </body>
 </html>
