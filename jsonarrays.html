@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Access an array value of a JSON object.</p>
+<p id="demo"></p>
+
+<p>Looping through an array using a for in loop:</p>
+<p id="demo2"></p>
+
+<p>Loopin through an array using a for loop:</p>
+<p id="demo3"></p>
+
+<p>Looping <b>foreach</b> through arrays inside arrays.</p>
+<p id="demo4"></p>
+
+<p>Looping <b>for</b> through arrays inside arrays.</p>
+<p id="demo5"></p>
+
+<script>
+var test = {
+  "name":"Danik",
+  "age":32,
+  cars:[
+    "Volswagen","Subaru","Toyota"
+  ]
+};
+var test2 = {
+  "name":"Danik",
+  "age":32,
+  cars:[
+    {"name":"Volswagen","models":["Golf I","Golf II","Golf III"]},
+    {"name":"Subaru","models":["Outback","Imprezza","Legacy"]},
+    {"name":"Toyota","models":["Corolla","Camry","Yaris"]}
+  ]
+};
+document.getElementById("demo").innerHTML = test.cars[2];
+
+for (var i in test.cars){
+  document.getElementById("demo2").innerHTML +=test.cars[i]+"<br>"
+}
+test2.cars[1].models[2]="Forester";
+delete test2.cars[1].models[1];
+for (var i in test2.cars){
+  document.getElementById("demo4").innerHTML +="<h1>"+test2.cars[i].name+"</h2>";
+  for (var j in test2.cars[i].models){
+    document.getElementById("demo4").innerHTML +=test2.cars[i].models[j]+"<br>";
+  }
+}
+
+for (var i=0; i<test.cars.length;i++){
+  document.getElementById("demo3").innerHTML +=test.cars[i]+"<br>"
+}
+
+for (var i=0; i<test2.cars.length;i++){
+  document.getElementById("demo5").innerHTML +="<h1>"+test2.cars[i].name+"</h1>";
+  for (var j=0;j<test2.cars[i].models.length;j++){
+    document.getElementById("demo5").innerHTML +=test2.cars[i].models[j]+"<br>";
+  }
+}
+
+</script>
+
+</body>
+</html>
