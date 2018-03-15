@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Convert a JavaScript object into a JSON string, and send it to the server.</h2>
+window.location = "https://www.w3schools.com/js/demo_json.php?x=" + myJSON;
+<h2>Convert a string written in JSON format, into a JavaScript object.</h2>
+
+<p id="demo"></p>
+<h2>Store and retrieve data from local storage.</h2>
+<p id="demo2"></p>
+<script>
+//Storing data:
+var myObj = { "name":"Daniyar", "age":32, "city":"Almaty" };
+var myJSON2 = JSON.stringify(myObj);
+localStorage.setItem("testJSON",myJSON2);
+// Retriving data:
+var text = localStorage.getItem("testJSON");
+obj = JSON.parse(text);
+document.getElementById("demo2").innerHTML = obj.name+" "+obj.age+" "+obj.city;
+var myJSON = JSON.stringify(myObj);
+//window.location = "https://www.w3schools.com/js/demo_json.php?x=" + myJSON;
+var myJSON = '{"name":"Danik","age":32, "city":"Almaty"}';
+var jsObject = JSON.parse(myJSON);
+document.getElementById("demo").innerHTML ="Name is "+ jsObject.name+" age is "+jsObject.age
++" city is "+jsObject.city;
+
+</script>
+
+</body>
+</html>
