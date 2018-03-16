@@ -1,0 +1,9 @@
+{
+    "name":"Danik",
+    "age":32,
+    "pets":[
+        { "animal":"dog", "name":"Sharik" },
+        { "animal":"cat", "name":"Felix" },
+        { "animal":"hamster", "name":"Lightning" }
+    ]
+}
