@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<p>User regular expression.</p>
+
+<p id="demo1"></p>
+
+<p id="demo2"></p>
+<button onclick="search1()">Using String search() With a Regular Expression</button>
+
+<p id="demo3"></p>
+<button onclick="search2()">Using String search() With String</button>
+
+<p id="demo4"></p>
+<button onclick="search3()">Use String replace() With a Regular Expression</button>
+
+<p id="demo5"></p>
+<button onclick="search4()">Using String replace() With a String</button>
+
+<p id="demo6"></p>
+<button onclick="search5()">Exists word search?</button>
+
+<p id="demo7"></p>
+<button onclick="search6()">Find word search</button>
+
+<script>
+    var text1="Text for search: Visit W3Schools!";
+    document.getElementById("demo1").innerHTML=text1;
+
+    function search1(){
+        return document.getElementById("demo2").innerHTML=text1.search(/w3schools/i);
+    }
+    function search2(){
+        return document.getElementById("demo3").innerHTML=text1.search("Visit");
+    }
+
+    function search3(){
+        return document.getElementById("demo4").innerHTML=
+            text1.replace(/search/i,"replace");
+    }
+    function search4(){
+        return document.getElementById("demo5").innerHTML=
+            text1.replace("Visit","Welcome to ");
+    }
+
+    function search5(){
+        return document.getElementById("demo6").innerHTML=
+            /search/.test(text1);
+    }
+
+    function search6(){
+        return document.getElementById("demo7").innerHTML=
+            /search/.exec(text1);
+    }
+
+
+    document.getElementById("demo3").innerHTML=text3;
+    document.getElementById("demo4").innerHTML=text4;
+</script>
+</body>
+</html>
